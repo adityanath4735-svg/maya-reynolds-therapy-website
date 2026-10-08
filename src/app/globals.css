@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Default: Calm Sage & Sand (Dr. Maya Reynolds) */
+    --primary: #2d5548;
+    --primary-hover: #234439;
+    --primary-light: #e8f0ec;
+    --secondary: #ebdcc9;
+    --secondary-hover: #dfceb7;
+    --accent: #c4764e;
+    --accent-hover: #b0643d;
+    --surface: #faf8f5;
+    --surface-alt: #f3ede4;
+    --surface-card: #ffffff;
+    --ink: #222625;
+    --ink-muted: #5e6663;
+    --ink-light: #89938f;
+    --border-color: #e4dcce;
+    --radius-soft: 16px;
+  }
+
+  [data-theme="ocean"] {
+    --primary: #254e5f;
+    --primary-hover: #1c3c4a;
+    --primary-light: #e4edf1;
+    --secondary: #d6e5eb;
+    --secondary-hover: #c4d7de;
+    --accent: #cf8438;
+    --accent-hover: #ba722c;
+    --surface: #f5f9fa;
+    --surface-alt: #e9f2f5;
+    --surface-card: #ffffff;
+    --ink: #1c272d;
+    --ink-muted: #57656e;
+    --ink-light: #84939c;
+    --border-color: #d1e0e6;
+  }
+
+  [data-theme="clay"] {
+    --primary: #7c483a;
+    --primary-hover: #67392d;
+    --primary-light: #f5eae7;
+    --secondary: #edd9c8;
+    --secondary-hover: #e0c8b2;
+    --accent: #55725e;
+    --accent-hover: #435b4b;
+    --surface: #faf6f2;
+    --surface-alt: #f2e9df;
+    --surface-card: #ffffff;
+    --ink: #29221f;
+    --ink-muted: #675c57;
+    --ink-light: #948680;
+    --border-color: #e6dacd;
+  }
+
+  [data-theme="conejo"] {
+    /* Original Conejo Valley counseling clone palette */
+    --primary: #4a5448;
+    --primary-hover: #3b4339;
+    --primary-light: #eef1ed;
+    --secondary: #dcdfd8;
+    --secondary-hover: #cbcfc6;
+    --accent: #8b6048;
+    --accent-hover: #744e39;
+    --surface: #f7f8f6;
+    --surface-alt: #eceee9;
+    --surface-card: #ffffff;
+    --ink: #262925;
+    --ink-muted: #5f645d;
+    --ink-light: #898e87;
+    --border-color: #dde0d9;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--ink);
+    background-color: var(--surface);
+  }
+
+  body {
+    background-color: var(--surface);
+    color: var(--ink);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: var(--font-cormorant), Georgia, serif;
+    letter-spacing: -0.015em;
+  }
+}
+
+/* Custom Utilities for aesthetic micro-interactions */
+.bg-primary { background-color: var(--primary); }
+.bg-primary-hover:hover { background-color: var(--primary-hover); }
+.bg-primary-light { background-color: var(--primary-light); }
+.bg-secondary { background-color: var(--secondary); }
+.bg-accent { background-color: var(--accent); }
+.bg-surface { background-color: var(--surface); }
+.bg-surface-alt { background-color: var(--surface-alt); }
+.bg-surface-card { background-color: var(--surface-card); }
+
+.text-primary { color: var(--primary); }
+.text-accent { color: var(--accent); }
+.text-ink { color: var(--ink); }
+.text-ink-muted { color: var(--ink-muted); }
+.text-ink-light { color: var(--ink-light); }
+
+.border-theme { border-color: var(--border-color); }
+
+/* Smooth transitions */
+.transition-luxury {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Glassmorphism */
+.glass-nav {
+  background: rgba(250, 248, 245, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* Custom focus ring for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Section container styling */
+.container-custom {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 76rem; /* 1216px */
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .container-custom {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Editorial badge */
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.95rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
