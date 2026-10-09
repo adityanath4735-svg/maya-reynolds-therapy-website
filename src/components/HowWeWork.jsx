@@ -6,14 +6,14 @@ export default function HowWeWork({ content, onOpenBooking }) {
   const { howWeWork } = content;
 
   return (
-    <section id="approach" className="py-16 md:py-24 bg-[var(--surface)] border-b border-[var(--border-color)]/60 scroll-mt-12">
+    <section id="approach" className="py-16 md:py-24 bg-[var(--surface)] border-b border-[var(--border-color)]/60 scroll-mt-28">
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Image with layered framing */}
           <div className="lg:col-span-5 relative order-2 lg:order-1">
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-xl border border-[var(--border-color)]">
               <Image
-                src="/images/service-anxiety.jpg"
+                src="/images/approach-space.jpg"
                 alt="A tranquil, sunlit therapy office space promoting calm and grounded reflection in Santa Monica"
                 fill
                 sizes="(max-width: 768px) 100vw, 40vw"

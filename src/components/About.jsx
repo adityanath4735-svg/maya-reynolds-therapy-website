@@ -6,7 +6,7 @@ export default function About({ content, onOpenBooking }) {
   const { about } = content;
 
   return (
-    <section id="about" className="py-16 md:py-24 bg-[var(--surface-alt)]/60 border-b border-[var(--border-color)]/60 scroll-mt-12">
+    <section id="about" className="py-16 md:py-24 bg-[var(--surface-alt)]/60 border-b border-[var(--border-color)]/60 scroll-mt-28">
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Dr. Maya Reynolds Portrait */}

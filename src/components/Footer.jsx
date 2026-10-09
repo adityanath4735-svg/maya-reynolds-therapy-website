@@ -6,7 +6,7 @@ export default function Footer({ content, onOpenBooking }) {
   const { footer, practitioner } = content;
 
   return (
-    <footer id="contact" className="bg-[var(--surface-alt)] border-t border-[var(--border-color)] text-[var(--ink)] pt-16 pb-24 md:pb-16">
+    <footer id="contact" className="bg-[var(--surface-alt)] border-t border-[var(--border-color)] text-[var(--ink)] pt-16 pb-24 md:pb-16 scroll-mt-28">
       <div className="container-custom space-y-14">
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12">

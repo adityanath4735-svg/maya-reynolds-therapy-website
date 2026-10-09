@@ -6,7 +6,7 @@ export default function Services({ content, onOpenBooking }) {
   const { services } = content;
 
   return (
-    <section id="services" className="py-16 md:py-24 bg-[var(--surface)] border-b border-[var(--border-color)]/60 scroll-mt-12">
+    <section id="services" className="py-16 md:py-24 bg-[var(--surface)] border-b border-[var(--border-color)]/60 scroll-mt-28">
       <div className="container-custom">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-3 mb-14 md:mb-20">

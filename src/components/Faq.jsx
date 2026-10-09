@@ -13,7 +13,7 @@ export default function Faq({ content, onOpenBooking }) {
   };
 
   return (
-    <section id="faq" className="py-16 md:py-24 bg-[var(--surface-alt)]/50 border-b border-[var(--border-color)]/60 scroll-mt-12">
+    <section id="faq" className="py-16 md:py-24 bg-[var(--surface-alt)]/50 border-b border-[var(--border-color)]/60 scroll-mt-28">
       <div className="container-custom">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-3 mb-12 md:mb-16">

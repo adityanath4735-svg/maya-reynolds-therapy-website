@@ -8,7 +8,7 @@ export default function Office({ content, onOpenBooking }) {
   const { office } = content;
 
   return (
-    <section id="office" className="py-16 md:py-24 bg-[var(--surface)] border-b border-[var(--border-color)]/60 scroll-mt-12">
+    <section id="office" className="py-16 md:py-24 bg-[var(--surface)] border-b border-[var(--border-color)]/60 scroll-mt-28">
       <div className="container-custom">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-3 mb-14 md:mb-18">
@@ -34,15 +34,13 @@ export default function Office({ content, onOpenBooking }) {
               </div>
               <div className="space-y-1">
                 <h4 className="text-sm font-bold text-[var(--ink)]">
-                  Physical Practice Location
+                  Verified Office Location
                 </h4>
                 <p className="text-xs text-[var(--ink-muted)]">
                   {office.addressNote}
                 </p>
                 <div className="pt-1 flex items-center gap-3 text-[11px] text-[var(--primary)] font-semibold">
-                  <span className="flex items-center gap-1">
-                    <Navigation className="w-3 h-3" /> Dedicated Parking Available
-                  </span>
+                  <span>Santa Monica, California</span>
                 </div>
               </div>
             </div>
