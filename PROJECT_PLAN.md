@@ -23,8 +23,9 @@
 - [x] **Custom "Our Office" section with 2–3 images**: Integrated section featuring `office-1.jpg`, `office-2.jpg`, `office-3.jpg`, Santa Monica address (`123th Street 45 W`), and natural light notes.
 - [x] **Responsive mobile and desktop layouts**: Tested and verified across 375px, 390px, 768px, 1024px, and 1440px viewports.
 - [x] **Functional navigation and interactive elements**: Smooth anchor scrolling with header offset, interactive consultation booking modal, FAQ accordion, dynamic multi-theme switcher, and mobile drawer menu.
-- [x] **Live deployment readiness**: Fully ready for 1-click Vercel deployment.
-- [x] **Public GitHub repository**: Configured with professional git commit history.
+- [x] **Contact form backend & serverless API**: Serverless route handler `POST /api/contact` with rigorous input validation (name, email regex, focus, session format, sanitized notes), error handling (400/415/500), and connected client form with loading and feedback states.
+- [x] **Live deployment verified**: Live on Vercel at [https://maya-reynolds-therapy-website-fo5k.vercel.app/](https://maya-reynolds-therapy-website-fo5k.vercel.app/) (HTTP/2 200 OK).
+- [x] **Public GitHub repository**: Configured with professional git commit history at [https://github.com/adityanath4735-svg/maya-reynolds-therapy-website.git](https://github.com/adityanath4735-svg/maya-reynolds-therapy-website.git).
 - [x] **Client-style walkthrough video (5 minutes)**: Rehearsed, non-technical script speaking directly to Dr. Maya Reynolds.
 
 ---
