@@ -109,12 +109,19 @@ export default function Footer({ content, onOpenBooking }) {
         {/* Bottom Bar: Copyright & Professional Ethics */}
         <div className="pt-6 border-t border-[var(--border-color)]/70 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-[var(--ink-muted)]">
           <p>{footer.copyright}</p>
-          <div className="flex items-center gap-6 text-[11px]">
+          <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-[11px]">
             <span>Privacy Policy</span>
             <span>•</span>
             <span>Terms of Practice</span>
             <span>•</span>
             <span>Good Faith Estimate</span>
+            <span>•</span>
+            <a
+              href="/admin"
+              className="font-medium text-[var(--primary)] hover:underline flex items-center gap-1"
+            >
+              <span>Intake Backend Portal</span>
+            </a>
           </div>
         </div>
       </div>
