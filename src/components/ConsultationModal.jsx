@@ -6,6 +6,8 @@ import { X, Calendar, CheckCircle2, Phone, Mail, Shield } from "lucide-react";
 
 export default function ConsultationModal({ isOpen, onClose }) {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,13 +19,37 @@ export default function ConsultationModal({ isOpen, onClose }) {
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setErrorMessage("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || "Unable to submit your inquiry. Please try again.");
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      setErrorMessage(err.message || "A network error occurred. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleReset = () => {
     setSubmitted(false);
+    setErrorMessage("");
     onClose();
   };
 
@@ -164,13 +190,20 @@ export default function ConsultationModal({ isOpen, onClose }) {
                 />
               </div>
 
+              {errorMessage && (
+                <div className="p-3 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs">
+                  {errorMessage}
+                </div>
+              )}
+
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center gap-2 bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-white font-semibold py-3.5 rounded-full text-sm shadow transition-all active:scale-95"
+                  disabled={isSubmitting}
+                  className="w-full flex items-center justify-center gap-2 bg-[var(--primary)] hover:bg-[var(--primary-hover)] disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold py-3.5 rounded-full text-sm shadow transition-all active:scale-95"
                 >
                   <Calendar className="w-4 h-4" />
-                  <span>Submit Consultation Request</span>
+                  <span>{isSubmitting ? "Submitting Inquiry..." : "Submit Consultation Request"}</span>
                 </button>
               </div>
 
